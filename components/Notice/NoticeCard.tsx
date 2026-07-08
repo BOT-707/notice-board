@@ -53,7 +53,7 @@ export default function NoticeCard({ notice, onDeleteClick }: NoticeCardProps) {
           <Calendar size={14} className="mr-1.5 opacity-70" />
           {format(new Date(notice.publishDate), 'MMM d, yyyy')}
         </div>
-        <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+        <div className="flex gap-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
           <Link
             href={`/notice/edit/${notice.id}`}
             className="p-2 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
