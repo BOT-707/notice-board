@@ -16,14 +16,13 @@ export default function NoticeCard({ notice, onDeleteClick }: NoticeCardProps) {
       {isUrgent && (
         <div className="absolute top-0 left-0 w-full h-1.5 bg-red-500" />
       )}
-      
+
       <div className="flex justify-between items-start mb-4">
         <div className="flex gap-2 flex-wrap">
-          <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold ${
-            isUrgent 
-              ? 'bg-red-50 text-red-700 ring-1 ring-red-600/20' 
+          <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold ${isUrgent
+              ? 'bg-red-50 text-red-700 ring-1 ring-red-600/20'
               : 'bg-gray-50 text-gray-600 ring-1 ring-gray-500/20'
-          }`}>
+            }`}>
             {isUrgent && <AlertCircle size={14} />}
             {notice.priority}
           </span>
@@ -37,7 +36,7 @@ export default function NoticeCard({ notice, onDeleteClick }: NoticeCardProps) {
       <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors">
         {notice.title}
       </h3>
-      
+
       <p className="text-gray-600 mb-6 flex-grow line-clamp-3 leading-relaxed">
         {notice.body}
       </p>
